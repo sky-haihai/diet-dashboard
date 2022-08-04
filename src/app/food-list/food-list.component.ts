@@ -16,19 +16,20 @@ export class FoodListComponent implements OnInit {
   constructor(private foodSvc: FoodService) { }
 
   ngOnInit(): void {
-    this.getFoods();
+    this.getFoodCandidates();
   }
 
   onSelected(food: Food): void {
     this.selectedFood = food;
   }
 
-  getFoods(): void {
-    this.foodSvc.getFoods()
-      .subscribe(foods => this.foods = foods);
+  getFoodCandidates(): void {
+    this.foods = this.foodSvc.getFoodCandidates();
   }
 
   addTodayFood(food: Food): void {
     this.foodSvc.addTodayFood(food);
+    this.getFoodCandidates();
+    //alert("Added " + food.name + " to today's food list.");
   }
 }

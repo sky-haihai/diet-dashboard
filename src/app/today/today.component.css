@@ -1,13 +1,15 @@
 button {
+  width: 100%;
+  padding: 10px 0;
+  box-sizing: border-box;
+  border: transparent 0px;
+  overflow: hidden;
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  width: 100%;
-  margin-top: 20px;
-  background-color: #eee;
-  padding: 1rem;
-  border-radius: 4px;
-  font-size: 1rem;
+  justify-content: space-around;
+  background-color: white;
+  color: salmon;
+  transition: 300ms;
 }
 
 button h2 {
@@ -20,6 +22,10 @@ button:hover {
   background-color: #cfd8dc;
 }
 
+button:focus-visible {
+  outline: none;
+}
+
 button:disabled {
   background-color: #eee;
   color: #ccc;
@@ -30,28 +36,13 @@ li {
   width: 100%;
 }
 
-button {
-  width: 100%;
-  padding: 10px 0;
-  box-sizing: border-box;
-  border: 5px solid lightsalmon;
-  overflow: hidden;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  background-color: white;
-  border-radius: 10px;
-  color: salmon;
-  transition: 300ms;
-}
-
 button:hover {
-  background-color: salmon;
+  background-color: lightsalmon;
   color: white;
 }
 
 button:active {
-  background-color: red;
+  background-color: salmon;
   color: white;
 }
 
@@ -97,6 +88,7 @@ button.selected {
   color: white;
   font-size: 20px;
   border: transparent 0px;
+  border-radius: 10px;
 }
 
 .delete-btn:hover {
@@ -116,7 +108,12 @@ button.selected {
   padding-bottom: 10px;
   background-color: lightsalmon;
   border-radius: 10px;
-  margin: 20px 0;
+  margin: 10px 0;
+  transition: 300ms;
+}
+
+.total.fulfilled {
+  background-color: lightgreen;
 }
 
 .total span {
@@ -124,4 +121,63 @@ button.selected {
   flex-grow: 2;
   font-size: 20px;
   color: white;
+}
+
+.placeholder {
+  width: 100%;
+  padding: 20px 0;
+  box-sizing: border-box;
+  border: 5px solid lightsalmon;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: white;
+  border-radius: 10px;
+  color: salmon;
+  transition: 300ms;
+}
+
+.food-list {
+  width: 100%;
+  padding: 0 0;
+  box-sizing: border-box;
+  border: 5px solid lightsalmon;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: white;
+  border-radius: 15px;
+  color: salmon;
+  transition: 300ms;
+  overflow: hidden;
+}
+
+.food-list ul {
+  width: 100%;
+  margin: 0;
+  list-style: none;
+}
+
+.food-list li {
+  margin: 0 auto;
+  margin: 0;
+  list-style: none;
+}
+
+.total span.higher {
+  color: red;
+}
+
+.now-eat {
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  background-color: white;
+  color: salmon;
+  font-size: 20px;
+  border-radius: 10px;
+  margin: 10px 0;
+  transition: 300ms;
 }

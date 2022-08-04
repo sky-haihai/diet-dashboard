@@ -1,23 +1,25 @@
 <h1>Food List</h1>
 <div class="food-list-container">
   <div class="food-info-title">
-    <span>Name</span>
-    <span>Fat</span>
-    <span>Carbohydrates</span>
-    <span>Protein</span>
+    <span>Name/100g</span>
+    <span>Fat(g)</span>
+    <span>Carbohydrates(g)</span>
+    <span>Protein(g)</span>
   </div>
-  <ul>
-    <li *ngFor="let food of foods">
-      <button [class.selected]="food===selectedFood" type="button" (click)="onSelected(food)">
-        <span>{{food.name}}</span>
-        <span>{{food.fat}}</span>
-        <span>{{food.carbohydrates}}</span>
-        <span>{{food.protein}}</span>
-      </button>
-    </li>
-  </ul>
-
-  <p *ngIf="selectedFood">Selected: {{selectedFood.name}}</p>
+  <div class="food-list">
+    <ul>
+      <li *ngFor="let food of foods">
+        <button [class.selected]="food===selectedFood" type="button" (click)="onSelected(food)">
+          <span>{{food.name}}</span>
+          <span>{{food.fat}}</span>
+          <span>{{food.carbohydrates}}</span>
+          <span>{{food.protein}}</span>
+        </button>
+      </li>
+    </ul>
+  </div>
 </div>
 
 <button *ngIf="selectedFood" (click)="addTodayFood(selectedFood)" class="add-btn">Add to today</button>
+
+<div>{{foods.length}}</div>

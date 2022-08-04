@@ -1,6 +1,4 @@
-export interface Food {
-  id?: number;
-  name: string;
+export interface Goal {
   fat: number;
   carbohydrates: number;
   protein: number;

@@ -2,15 +2,62 @@ html {
   transition: 300ms;
 }
 
+h1 {
+  flex: 1;
+  background-color: white;
+  border-radius: 10px;
+  color: lightsalmon;
+  width: 300px;
+  font-size: 30px;
+  height: 2em;
+  line-height: 2em;
+  text-align: center;
+}
+
 .header {
   flex: 1;
   display: flex;
   flex-direction: row;
-  background-color: white;
-  padding: 10px;
+  background-color: lightsalmon;
+  padding: 0;
   border-radius: 10px;
   margin-bottom: 10px;
   margin: 10px 10px 10px 10px;
+}
+
+.block-icon {
+  position: relative;
+  height: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.block-title {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  height: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.block-date-display {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  height: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.block-date-display span {
+  padding: 30px 20px;
+  height: 2em;
+  line-height: 2em;
+  text-align: center;
+  font-size: 20px;
+  color: lightsalmon;
 }
 
 .user-icon {
@@ -65,6 +112,11 @@ html {
   color: white;
 }
 
+.sidebar-item.selected {
+  background-color: red;
+  color: white;
+}
+
 .content {
   flex: 8;
   background-color: white;
@@ -77,22 +129,19 @@ html {
 .footer {
   position: fixed;
   left: 0;
-  right: 0;
   bottom: 0;
   flex: 1;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   background-color: white;
-  padding: 5px 0px;
+  padding: 10px;
   border-radius: 10px;
-  margin: 10px 10px 10px 10px;
-  align-items: center;
-  text-align: center;
+  margin: 10px 10px 5px 10px;
 }
 
 .footer * {
   font-size: 14px;
-  margin: 0 auto;
+  text-align: left;
 }
 
 .date-display {
@@ -100,5 +149,4 @@ html {
   border-radius: 10px;
   color: white;
   flex: 1;
-  align-self: right;
 }

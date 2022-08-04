@@ -1,0 +1,13 @@
+.chart-container {
+  background-color: lightsalmon;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.chart {
+  width: 600px;
+  height: 600px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+}

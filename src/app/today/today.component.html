@@ -1,32 +1,41 @@
 <h1>Today</h1>
 <div class="today-list-container">
-  <ul>
-    <li *ngFor="let food of todayFoods">
-      <button [class.selected]="food===selectedFood" type="button" (click)="onSelected(food)">
-        <span>{{food.name}}</span>
-        <span>{{food.fat}}</span>
-        <span>{{food.carbohydrates}}</span>
-        <span>{{food.protein}}</span>
-      </button>
-    </li>
-  </ul>
-
-  <p *ngIf="selectedFood">Selected: {{selectedFood.name}}</p>
+  <div class="food-info-title">
+    <span>Name/100g</span>
+    <span>Fat(g)</span>
+    <span>Carbohydrates(g)</span>
+    <span>Protein(g)</span>
+  </div>
+  <div *ngIf="todayFoods.length<=0" class="placeholder">You haven't added anything</div>
+  <div class="food-list">
+    <ul>
+      <li *ngFor="let food of todayFoods">
+        <button [class.selected]="food===selectedFood" type="button" (click)="onSelected(food)">
+          <span>{{food.name}}</span>
+          <span>{{food.fat}}</span>
+          <span>{{food.carbohydrates}}</span>
+          <span>{{food.protein}}</span>
+        </button>
+      </li>
+    </ul>
+  </div>
 </div>
 <div class="result">
   <div class="total">
     <span>Goal</span>
-    <span>Fat: {{totalFat()}}</span>
-    <span>Carbohydrates: {{totalCarbohydrates()}}</span>
-    <span>Protein: {{totalProtein()}}</span>
+    <span>{{getTodayFat()}}</span>
+    <span>{{getTodayCarbon()}}</span>
+    <span>{{getTodayProtein()}}</span>
   </div>
 
-  <div class="total">
+  <div class="total" [class.fulfilled]="isFulfilled()">
     <span>Total</span>
-    <span>Fat: {{totalFat()}}</span>
-    <span>Carbohydrates: {{totalCarbohydrates()}}</span>
-    <span>Protein: {{totalProtein()}}</span>
+    <span [class.higher]="totalFat()>todayGoal.fat+5 && todayGoal.fat>=0">{{totalFat()}}</span>
+    <span
+      [class.higher]="totalCarbohydrates()>todayGoal.carbohydrates+5 && todayGoal.carbohydrates>=0">{{totalCarbohydrates()}}</span>
+    <span [class.higher]="totalProtein()>todayGoal.protein+5 && todayGoal.protein>=0">{{totalProtein()}}</span>
   </div>
 </div>
 
-<button *ngIf="selectedFood" (click)="deleteTodayFood(selectedFood)" class="delete-btn">Delete</button>
+<button *ngIf="selectedFood" (click)="deleteTodayFood(selectedFood)" class="delete-btn">Remove</button>
+<div *ngIf="isFulfilled()" class="now-eat">Now Eat~</div>

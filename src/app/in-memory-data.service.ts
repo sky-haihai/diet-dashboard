@@ -7,24 +7,25 @@ import { Food } from './food';
 })
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
-    const foods = [
-      { name: "Apple", fat: 5, carbohydrates: 5, protein: 5 },
-      { name: "Orange", fat: 5, carbohydrates: 5, protein: 5 },
-      { name: "Banana", fat: 5, carbohydrates: 5, protein: 5 },
-      { name: "Pineapple", fat: 5, carbohydrates: 5, protein: 5 },
-      { name: "Kiwi", fat: 5, carbohydrates: 5, protein: 5 },
-      { name: "Mango", fat: 5, carbohydrates: 5, protein: 5 },
-      { name: "Strawberry", fat: 5, carbohydrates: 5, protein: 5 },
-      { name: "Blueberry", fat: 5, carbohydrates: 5, protein: 5 },
-      { name: "Raspberry", fat: 5, carbohydrates: 5, protein: 5 },
-      { name: "Watermelon", fat: 5, carbohydrates: 5, protein: 5 },
-    ];
-    return { foods };
+    // const foods = [
+    //   { id: 0, name: "Tuna", fat: 1, carbohydrates: 0, protein: 23 },
+    //   { id: 1, name: "Orange", fat: 5, carbohydrates: 5, protein: 5 },
+    //   { id: 2, name: "Banana", fat: 5, carbohydrates: 5, protein: 5 },
+    //   { id: 3, name: "Pineapple", fat: 5, carbohydrates: 5, protein: 5 },
+    //   { id: 4, name: "Kiwi", fat: 5, carbohydrates: 5, protein: 5 },
+    //   { id: 5, name: "Mango", fat: 5, carbohydrates: 5, protein: 5 },
+    //   { id: 6, name: "Strawberry", fat: 5, carbohydrates: 5, protein: 5 },
+    //   { id: 7, name: "Blueberry", fat: 5, carbohydrates: 5, protein: 5 },
+    //   { id: 8, name: "Raspberry", fat: 5, carbohydrates: 5, protein: 5 },
+    //   { id: 9, name: "Watermelon", fat: 5, carbohydrates: 5, protein: 5 },
+    // ];
+
+    const todayGoal = { fat: 50, carbohydrates: 75, protein: 85 };
+
+    return { todayGoal };
   }
 
   todayFoods: Food[] = [];
-
-  todayGoal = { fat: 20, carbohydrates: 40, protein: 30 };
 
   // Overrides the genId method to ensure that a hero always has an id.
   // If the heroes array is empty,

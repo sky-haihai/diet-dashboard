@@ -1,30 +1,31 @@
-li {
-  width: 100%;
-}
-
 button {
   width: 100%;
   padding: 10px 0;
   box-sizing: border-box;
-  border: 5px solid lightsalmon;
+  border: transparent 0px;
   overflow: hidden;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   background-color: white;
-  border-radius: 10px;
   color: salmon;
   transition: 300ms;
 }
 
 button:hover {
-  background-color: salmon;
+  background-color: lightsalmon;
   color: white;
+  border-radius: 10px;
 }
 
 button:active {
-  background-color: red;
+  background-color: salmon;
   color: white;
+  border-radius: 10px;
+}
+
+button:focus-visible {
+  outline: none;
 }
 
 button span {
@@ -34,9 +35,9 @@ button span {
 }
 
 button.selected {
-  background-color: red;
-  border-radius: 50px;
+  background-color: salmon;
   color: white;
+  border-radius: 10px;
 }
 
 .food-info-title {
@@ -55,9 +56,38 @@ button.selected {
   color: white;
 }
 
+.food-list {
+  width: 100%;
+  padding: 0 0;
+  box-sizing: border-box;
+  border: 5px solid lightsalmon;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: white;
+  border-radius: 15px;
+  color: salmon;
+  transition: 300ms;
+  overflow: hidden;
+}
+
+.food-list ul {
+  width: 100%;
+  margin: 0;
+  list-style: none;
+}
+
+.food-list li {
+  margin: 0 auto;
+  margin: 0;
+  list-style: none;
+}
+
 .food-list-container {
   border-radius: 10px;
   background-color: lightsalmon;
+  transition: 300ms;
 }
 
 .add-btn {
@@ -68,6 +98,7 @@ button.selected {
   color: white;
   font-size: 20px;
   border: transparent 0px;
+  border-radius: 10px;
 }
 
 .add-btn:hover {
