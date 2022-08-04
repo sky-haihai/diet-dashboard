@@ -1,0 +1,79 @@
+li {
+  width: 100%;
+}
+
+button {
+  width: 100%;
+  padding: 10px 0;
+  box-sizing: border-box;
+  border: 5px solid lightsalmon;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: white;
+  border-radius: 10px;
+  color: salmon;
+  transition: 300ms;
+}
+
+button:hover {
+  background-color: salmon;
+  color: white;
+}
+
+button:active {
+  background-color: red;
+  color: white;
+}
+
+button span {
+  flex: 1;
+  flex-grow: 2;
+  font-size: 20px;
+}
+
+button.selected {
+  background-color: red;
+  border-radius: 50px;
+  color: white;
+}
+
+.food-info-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+
+.food-info-title span {
+  flex: 1;
+  flex-grow: 2;
+  font-size: 20px;
+  color: white;
+}
+
+.food-list-container {
+  border-radius: 10px;
+  background-color: lightsalmon;
+}
+
+.add-btn {
+  margin: 0 auto;
+  width: 30%;
+  margin-top: 10px;
+  background-color: lightsalmon;
+  color: white;
+  font-size: 20px;
+  border: transparent 0px;
+}
+
+.add-btn:hover {
+  background-color: salmon;
+}
+
+.add-btn:active {
+  background-color: red;
+}

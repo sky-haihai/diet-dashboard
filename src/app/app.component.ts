@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'diet-dashboard';
+
+  date = "Loading Date...";
+  setinterval = setInterval(() => {
+    var newDate = new Date(Date.now());
+    this.date = newDate.toDateString() + " " + newDate.toLocaleTimeString();
+  }, 1000);
 }
